@@ -144,6 +144,8 @@ function init(){
 					localStorage.setItem('BlackJackJs-userName', player.name.value);
 					localStorage.setItem('BlackJackJs-funds', '1000');
 					localStorage.setItem('BlackJackJs-chips', JSON.stringify(player.chips));
+					var myAudio = document.getElementById("play");
+return myAudio.paused ? myAudio.play() : myAudio.pause();
 					game.start();
 				});
 				this.startContainer.addChild(titleText, nameInput, submitText);
